@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="15dp"
+    android:background="#F6F6F9"
+    tools:context=".Food_detail_activity">
+
+    <ImageView
+        android:id="@+id/backicon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/icon_back"
+        android:padding="5dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"/>
+
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/fav"
+        android:padding="5dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/crdview"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="24dp"
+        app:cardCornerRadius="120dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backicon">
+
+
+
+    </androidx.cardview.widget.CardView>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/food_image"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:src="@drawable/img2"
+        app:layout_constraintTop_toTopOf="@id/crdview"
+        app:layout_constraintBottom_toBottomOf="@id/crdview"
+        app:layout_constraintLeft_toLeftOf="@id/crdview"
+        app:layout_constraintRight_toRightOf="@id/crdview"
+        app:cardCornerRadius="120dp"
+        android:elevation="10dp"
+         />
+
+    <TextView
+        android:id="@+id/food_Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="25dp"
+        android:fontFamily="serif"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:text="veggie tomato mix"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="@id/crdview"
+        app:layout_constraintStart_toStartOf="@id/crdview"
+        app:layout_constraintTop_toBottomOf="@id/crdview" />
+
+    <TextView
+        android:id="@+id/food_Prc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="25dp"
+        android:gravity="center"
+        android:text="Rs. 400"
+        android:textColor="@color/orange"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/food_Name"
+        app:layout_constraintStart_toStartOf="@+id/food_Name"
+        app:layout_constraintTop_toBottomOf="@+id/food_Name" />
+
+    <TextView
+        android:id="@+id/deli_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delivery Info"
+        android:fontFamily="serif"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/food_Prc" />
+
+    <TextView
+        android:id="@+id/del_text_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="delivered between 20-30 minutes after order placement."
+        app:layout_constraintStart_toStartOf="@+id/deli_info"
+        app:layout_constraintTop_toBottomOf="@+id/deli_info"
+        android:textSize="18sp"
+        />
+
+    <TextView
+        android:id="@+id/Ret_policy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Return policy"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:fontFamily="serif"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@id/del_text_info"
+        app:layout_constraintTop_toBottomOf="@+id/del_text_info" />
+
+    <TextView
+        android:id="@+id/ret_policy_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="All our foods are doule checked before leaving our stores so by any case you found a broken food please contact our hotline immediately. "
+        app:layout_constraintStart_toStartOf="@+id/Ret_policy"
+        app:layout_constraintTop_toBottomOf="@+id/Ret_policy"
+        android:textSize="18sp"/>
+
+    <Button
+        android:id="@+id/add_to_cart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_bg"
+        android:text="add to cart"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ret_policy_text"
+        android:layout_marginTop="20dp"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
